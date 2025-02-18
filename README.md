@@ -13,7 +13,7 @@
 1. Установите [`poetry`](https://python-poetry.org/)
 2. Установите зависимости:
 
-```bash
+```sh
 poetry install
 poetry shell
 ```
@@ -24,13 +24,13 @@ poetry shell
 
 4. Примените миграции:
 
-```bash
+```sh
 alembic -c src/models/alembic.ini upgrade head
 ```
 
 5. Выполните команду в консоле:
 
-```bash
+```sh
 uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
@@ -42,10 +42,7 @@ pytest -v
 
 
 ### Для работы в контейнере
-
-1. Запустите контейнеры: `docker compose up --build`
-2. Примените миграции
-
 ```sh
-alembic -c src/models/alembic.ini upgrade head
-```  
+docker compose up --build
+```
+  
